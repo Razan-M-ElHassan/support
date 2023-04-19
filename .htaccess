@@ -1,0 +1,14 @@
+Options -Multiviews
+RewriteEngine On
+
+# the base folder To redirect To
+RewriteBase /support
+
+# not Directory
+# not File
+# not Link
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
