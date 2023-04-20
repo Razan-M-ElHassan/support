@@ -48,7 +48,7 @@
 				<div class="card">
 					<div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 						<h6>{{x.PHONE}}</h6>
-						<h6>{{x.EMAIL}}</h6>
+						<h6>{{x.DESCR}}</h6>
 						<h6>{{aarea[x.CITY].NAME}}</h6>
 						<h6>{{specialist[x.SPEC].NAME}}</h6>
 						<!--h3 v-for="(item ,it_index) in items" >{{other_item(x.OTH_DATA,item.ID)}}</h3-->
@@ -136,6 +136,14 @@
 							</div>
 						</div>
 						<div class="d-none err_notification" id="valid_captcha">this field required</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<input type="checkbox" class="" id="accept" name="accept" placeholder="أوافق على الشروط والاحكام" value="1" required />
+							أوافق على 
+							<a href="<?php echo URL?>dashboard/terms" target="_blank"> الشروط والاحكام</a>
+							<div class="err_notification " id="valid_accept">راجع مدخلات هذا الحقل</div>
+						</div>
 					</div>
 					<div class="form_msg d-none">تم حفط الطلب</div>
 				</div>
