@@ -47,8 +47,9 @@
 				<a target="_blank" :href="'<?php echo URL?>dashboard/index/'+x.ID">
 				<div class="card">
 					<div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
+						<h6>رقم الطلب: {{x.ID}}</h6>
 						<h6>{{x.PHONE}}</h6>
-						<h6>{{x.DESCR}}</h6>
+						<h6>{{x.DESCR.substr(1, 50)}}</h6>
 						<h6>{{aarea[x.CITY].NAME}}</h6>
 						<h6>{{specialist[x.SPEC].NAME}}</h6>
 						<!--h3 v-for="(item ,it_index) in items" >{{other_item(x.OTH_DATA,item.ID)}}</h3-->
